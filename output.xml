@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220404 05:12:10.150" rpa="false" schemaversion="3">
+<suite id="s1" name="Zenklub Testes Gherkin Bdd" source="C:\Users\Admin\Desktop\robotframeworktests\zenklub_testes_gherkin_bdd.robot">
+<test id="s1-t1" name="Test Case 01 - Login" line="8">
+<kw name="Open the browser" library="zenklub_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220404 05:12:10.367" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220404 05:12:10.367" endtime="20220404 05:12:11.917"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220404 05:12:11.918" endtime="20220404 05:12:12.043"/>
+</kw>
+<status status="PASS" starttime="20220404 05:12:10.367" endtime="20220404 05:12:12.043"/>
+</kw>
+<kw name="Given that I go into &quot;zenklub.com.br/auth/login&quot;" library="zenklub_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220404 05:12:12.045" level="INFO">Opening url 'https://zenklub.com.br/auth/login'</msg>
+<status status="PASS" starttime="20220404 05:12:12.045" endtime="20220404 05:12:14.172"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${LOGIN_FORM_EMAIL}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220404 05:12:14.172" endtime="20220404 05:12:14.196"/>
+</kw>
+<status status="PASS" starttime="20220404 05:12:12.044" endtime="20220404 05:12:14.197"/>
+</kw>
+<kw name="And use &quot;qa-automation@zenklub.com&quot; as email" library="zenklub_resources" sourcename="Use &quot;${EMAIL}&quot; as email">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=${LOGIN_FORM_EMAIL}</arg>
+<arg>text=${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220404 05:12:14.198" level="INFO">Typing text 'qa-automation@zenklub.com' into text field 'login-form-email'.</msg>
+<status status="PASS" starttime="20220404 05:12:14.198" endtime="20220404 05:12:14.320"/>
+</kw>
+<status status="PASS" starttime="20220404 05:12:14.197" endtime="20220404 05:12:14.320"/>
+</kw>
+<kw name="And &quot;qachallenge&quot; as password" library="zenklub_resources" sourcename="&quot;${SENHA}&quot; as password">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=login-form-password</arg>
+<arg>text=${SENHA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220404 05:12:14.321" level="INFO">Typing text 'qachallenge' into text field 'login-form-password'.</msg>
+<status status="PASS" starttime="20220404 05:12:14.321" endtime="20220404 05:12:14.439"/>
+</kw>
+<status status="PASS" starttime="20220404 05:12:14.321" endtime="20220404 05:12:14.439"/>
+</kw>
+<kw name="Then I need to be able to login on Zenklub website" library="zenklub_resources">
+<kw name="That I go into &quot;zenklub.com.br/auth/login&quot;" library="zenklub_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220404 05:12:14.443" level="INFO">Opening url 'https://zenklub.com.br/auth/login'</msg>
+<status status="PASS" starttime="20220404 05:12:14.443" endtime="20220404 05:12:15.726"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${LOGIN_FORM_EMAIL}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220404 05:12:15.727" endtime="20220404 05:12:15.787"/>
+</kw>
+<status status="PASS" starttime="20220404 05:12:14.442" endtime="20220404 05:12:15.787"/>
+</kw>
+<kw name="Use &quot;${EMAIL}&quot; as email" library="zenklub_resources" sourcename="Use &quot;${EMAIL}&quot; as email">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=${LOGIN_FORM_EMAIL}</arg>
+<arg>text=${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220404 05:12:15.788" level="INFO">Typing text 'qa-automation@zenklub.com' into text field 'login-form-email'.</msg>
+<status status="PASS" starttime="20220404 05:12:15.787" endtime="20220404 05:12:15.955"/>
+</kw>
+<status status="PASS" starttime="20220404 05:12:15.787" endtime="20220404 05:12:15.956"/>
+</kw>
+<kw name="&quot;${SENHA}&quot; as password" library="zenklub_resources" sourcename="&quot;${SENHA}&quot; as password">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=login-form-password</arg>
+<arg>text=${SENHA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220404 05:12:15.959" level="INFO">Typing text 'qachallenge' into text field 'login-form-password'.</msg>
+<status status="PASS" starttime="20220404 05:12:15.957" endtime="20220404 05:12:16.060"/>
+</kw>
+<status status="PASS" starttime="20220404 05:12:15.957" endtime="20220404 05:12:16.060"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//span[@class='zk-button zk-rounded-full zk-font-thick zk-flex zk-justify-center zk-items-center zk-w-full zk-transition zk-duration-300 zk-text-center zk-uppercase ng-tns-c42-0 ng-trigger ng-trigger-loading zk-cursor-pointer active:zk-bg-primary hover:zk-bg-primary-light hover:zk-text-white-base zk-bg-primary zk-text-white-base zk-h-12'][contains(.,'Entrar')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220404 05:12:16.060" level="INFO">Clicking element '//span[@class='zk-button zk-rounded-full zk-font-thick zk-flex zk-justify-center zk-items-center zk-w-full zk-transition zk-duration-300 zk-text-center zk-uppercase ng-tns-c42-0 ng-trigger ng-trigger-loading zk-cursor-pointer active:zk-bg-primary hover:zk-bg-primary-light hover:zk-text-white-base zk-bg-primary zk-text-white-base zk-h-12'][contains(.,'Entrar')]'.</msg>
+<status status="PASS" starttime="20220404 05:12:16.060" endtime="20220404 05:12:16.151"/>
+</kw>
+<status status="PASS" starttime="20220404 05:12:14.440" endtime="20220404 05:12:16.151"/>
+</kw>
+<kw name="Close the browser" library="zenklub_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220404 05:12:16.322" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-76.png"&gt;&lt;img src="selenium-screenshot-76.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220404 05:12:16.152" endtime="20220404 05:12:16.322"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220404 05:12:16.322" endtime="20220404 05:12:21.963"/>
+</kw>
+<status status="PASS" starttime="20220404 05:12:16.152" endtime="20220404 05:12:21.963"/>
+</kw>
+<doc>This test checks the login to the website zenklub.com.br</doc>
+<tag>login</tag>
+<status status="PASS" starttime="20220404 05:12:10.366" endtime="20220404 05:12:21.965"/>
+</test>
+<test id="s1-t2" name="Test Case 02 - Pesquisa de um Produto" line="16">
+<kw name="Open the browser" library="zenklub_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220404 05:12:21.972" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220404 05:12:21.971" endtime="20220404 05:12:26.156"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220404 05:12:26.156" endtime="20220404 05:12:26.271"/>
+</kw>
+<status status="PASS" starttime="20220404 05:12:21.970" endtime="20220404 05:12:26.272"/>
+</kw>
+<kw name="Given I have logged in to the Zenklub page" library="zenklub_resources">
+<kw name="I need to be able to login on Zenklub website" library="zenklub_resources">
+<kw name="That I go into &quot;zenklub.com.br/auth/login&quot;" library="zenklub_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220404 05:12:26.274" level="INFO">Opening url 'https://zenklub.com.br/auth/login'</msg>
+<status status="PASS" starttime="20220404 05:12:26.274" endtime="20220404 05:12:35.424"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${LOGIN_FORM_EMAIL}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220404 05:12:35.424" endtime="20220404 05:12:35.448"/>
+</kw>
+<status status="PASS" starttime="20220404 05:12:26.274" endtime="20220404 05:12:35.449"/>
+</kw>
+<kw name="Use &quot;${EMAIL}&quot; as email" library="zenklub_resources" sourcename="Use &quot;${EMAIL}&quot; as email">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=${LOGIN_FORM_EMAIL}</arg>
+<arg>text=${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220404 05:12:35.450" level="INFO">Typing text 'qa-automation@zenklub.com' into text field 'login-form-email'.</msg>
+<status status="PASS" starttime="20220404 05:12:35.449" endtime="20220404 05:12:35.581"/>
+</kw>
+<status status="PASS" starttime="20220404 05:12:35.449" endtime="20220404 05:12:35.581"/>
+</kw>
+<kw name="&quot;${SENHA}&quot; as password" library="zenklub_resources" sourcename="&quot;${SENHA}&quot; as password">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=login-form-password</arg>
+<arg>text=${SENHA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220404 05:12:35.582" level="INFO">Typing text 'qachallenge' into text field 'login-form-password'.</msg>
+<status status="PASS" starttime="20220404 05:12:35.582" endtime="20220404 05:12:35.748"/>
+</kw>
+<status status="PASS" starttime="20220404 05:12:35.581" endtime="20220404 05:12:35.748"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//span[@class='zk-button zk-rounded-full zk-font-thick zk-flex zk-justify-center zk-items-center zk-w-full zk-transition zk-duration-300 zk-text-center zk-uppercase ng-tns-c42-0 ng-trigger ng-trigger-loading zk-cursor-pointer active:zk-bg-primary hover:zk-bg-primary-light hover:zk-text-white-base zk-bg-primary zk-text-white-base zk-h-12'][contains(.,'Entrar')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220404 05:12:35.749" level="INFO">Clicking element '//span[@class='zk-button zk-rounded-full zk-font-thick zk-flex zk-justify-center zk-items-center zk-w-full zk-transition zk-duration-300 zk-text-center zk-uppercase ng-tns-c42-0 ng-trigger ng-trigger-loading zk-cursor-pointer active:zk-bg-primary hover:zk-bg-primary-light hover:zk-text-white-base zk-bg-primary zk-text-white-base zk-h-12'][contains(.,'Entrar')]'.</msg>
+<status status="PASS" starttime="20220404 05:12:35.749" endtime="20220404 05:12:35.917"/>
+</kw>
+<status status="PASS" starttime="20220404 05:12:26.273" endtime="20220404 05:12:35.917"/>
+</kw>
+<status status="PASS" starttime="20220404 05:12:26.272" endtime="20220404 05:12:35.918"/>
+</kw>
+<kw name="When I be redirected to /profile/sessions &quot;Você ainda não fez nenhuma sessão. Encontre o profissional perfeito para você ainda hoje Você ainda não fez nenhuma sessão. Encontre o profissional perfeito para você ainda hoje &quot;" library="zenklub_resources">
+<kw name="I need to be able to login on Zenklub website" library="zenklub_resources">
+<kw name="That I go into &quot;zenklub.com.br/auth/login&quot;" library="zenklub_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220404 05:12:35.921" level="INFO">Opening url 'https://zenklub.com.br/auth/login'</msg>
+<status status="PASS" starttime="20220404 05:12:35.920" endtime="20220404 05:12:37.233"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${LOGIN_FORM_EMAIL}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220404 05:12:37.233" endtime="20220404 05:12:37.309"/>
+</kw>
+<status status="PASS" starttime="20220404 05:12:35.920" endtime="20220404 05:12:37.309"/>
+</kw>
+<kw name="Use &quot;${EMAIL}&quot; as email" library="zenklub_resources" sourcename="Use &quot;${EMAIL}&quot; as email">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=${LOGIN_FORM_EMAIL}</arg>
+<arg>text=${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220404 05:12:37.310" level="INFO">Typing text 'qa-automation@zenklub.com' into text field 'login-form-email'.</msg>
+<status status="PASS" starttime="20220404 05:12:37.310" endtime="20220404 05:12:37.452"/>
+</kw>
+<status status="PASS" starttime="20220404 05:12:37.309" endtime="20220404 05:12:37.453"/>
+</kw>
+<kw name="&quot;${SENHA}&quot; as password" library="zenklub_resources" sourcename="&quot;${SENHA}&quot; as password">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=login-form-password</arg>
+<arg>text=${SENHA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220404 05:12:37.454" level="INFO">Typing text 'qachallenge' into text field 'login-form-password'.</msg>
+<status status="PASS" starttime="20220404 05:12:37.454" endtime="20220404 05:12:37.589"/>
+</kw>
+<status status="PASS" starttime="20220404 05:12:37.453" endtime="20220404 05:12:37.589"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//span[@class='zk-button zk-rounded-full zk-font-thick zk-flex zk-justify-center zk-items-center zk-w-full zk-transition zk-duration-300 zk-text-center zk-uppercase ng-tns-c42-0 ng-trigger ng-trigger-loading zk-cursor-pointer active:zk-bg-primary hover:zk-bg-primary-light hover:zk-text-white-base zk-bg-primary zk-text-white-base zk-h-12'][contains(.,'Entrar')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220404 05:12:37.589" level="INFO">Clicking element '//span[@class='zk-button zk-rounded-full zk-font-thick zk-flex zk-justify-center zk-items-center zk-w-full zk-transition zk-duration-300 zk-text-center zk-uppercase ng-tns-c42-0 ng-trigger ng-trigger-loading zk-cursor-pointer active:zk-bg-primary hover:zk-bg-primary-light hover:zk-text-white-base zk-bg-primary zk-text-white-base zk-h-12'][contains(.,'Entrar')]'.</msg>
+<status status="PASS" starttime="20220404 05:12:37.589" endtime="20220404 05:12:37.692"/>
+</kw>
+<status status="PASS" starttime="20220404 05:12:35.920" endtime="20220404 05:12:37.692"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=" Você ainda não fez nenhuma sessão. Encontre o profissional perfeito para você ainda hoje "</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<msg timestamp="20220404 05:12:44.888" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-77.png"&gt;&lt;img src="selenium-screenshot-77.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220404 05:12:44.888" level="FAIL">Text '" Você ainda não fez nenhuma sessão. Encontre o profissional perfeito para você ainda hoje "' did not appear in 5 seconds.</msg>
+<status status="FAIL" starttime="20220404 05:12:37.692" endtime="20220404 05:12:44.890"/>
+</kw>
+<status status="FAIL" starttime="20220404 05:12:35.919" endtime="20220404 05:12:44.891"/>
+</kw>
+<kw name="Then I should not have any session scheduled &quot;Agendar Sessão&quot;" library="zenklub_resources">
+<status status="NOT RUN" starttime="20220404 05:12:44.892" endtime="20220404 05:12:44.892"/>
+</kw>
+<kw name="Close the browser" library="zenklub_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220404 05:12:45.011" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-78.png"&gt;&lt;img src="selenium-screenshot-78.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220404 05:12:44.893" endtime="20220404 05:12:45.012"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220404 05:12:45.012" endtime="20220404 05:12:47.242"/>
+</kw>
+<status status="PASS" starttime="20220404 05:12:44.893" endtime="20220404 05:12:47.242"/>
+</kw>
+<doc>This test verify sessions scheduled</doc>
+<tag>sessions_scheduled</tag>
+<status status="FAIL" starttime="20220404 05:12:21.968" endtime="20220404 05:12:47.243">Text '" Você ainda não fez nenhuma sessão. Encontre o profissional perfeito para você ainda hoje "' did not appear in 5 seconds.</status>
+</test>
+<doc>Essa suíte testa o site da zenklub.com.br</doc>
+<status status="FAIL" starttime="20220404 05:12:10.152" endtime="20220404 05:12:47.248"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">login</stat>
+<stat pass="0" fail="1" skip="0">sessions_scheduled</stat>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Zenklub Testes Gherkin Bdd">Zenklub Testes Gherkin Bdd</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
