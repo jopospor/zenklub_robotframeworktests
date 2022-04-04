@@ -5,10 +5,10 @@ Para instalar o python acesse a página de download da ferramenta e clicar em ht
 # Instalando o Robot Framework
 
 No prompt de comando (cmd) execute e aguarde a instalação:
-    ## pip install robotframework
+    `pip install robotframework`
 
 Para saber se deu tudo certo no prompt de comando (cmd) execute:
-    ## robot --version
+    `robot --version`
 
 # Navegador
 
@@ -16,6 +16,6 @@ Será utilizado o Chrome como navegador padrão para os testes, então tenha bai
 
 # Comandos para a execução dos testes
 
-   ## robot zenklub_testes.robot 
+   `robot zenklub_testes.robot` 
 
-   ## robot zenklub_testes_gherkin_bdd.robot
+   `robot zenklub_testes_gherkin_bdd.robot`
